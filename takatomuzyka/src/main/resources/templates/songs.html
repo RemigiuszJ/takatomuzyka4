@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twoje piosenki</title>
+</head>
+<body>
+<h1>Twoje piosenki</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Publisher</th>
+        <th>Year</th>
+    </tr>
+    <tr th:each="song :${songs}">
+        <td th:text="${song.id}">1</td>
+        <td th:text="${song.title}">Kurier w zapaści</td>
+        <td th:text="${song.year}">2020</td>
+    </tr>
+</table>
+
+</body>
+</html>
